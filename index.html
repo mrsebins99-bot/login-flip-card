@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container" id="loginPage">
+    <div class="box">
+      <h1>Welcome</h1>
+      <p>Login to reveal your card</p>
+
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+
+      <p id="message"></p>
+
+      <p class="small">
+        Demo login: <b>admin</b> / <b>1234</b>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="container hidden" id="mainPage">
+
+    <h1>Hello, <span id="userDisplay"></span>!</h1>
+    <p>Touch the card to reveal the image.</p>
+
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-inner">
+
+        <div class="card-front">
+          <div class="lock">🔒</div>
+          <h2>Secret Card</h2>
+          <p>Touch to open</p>
+        </div>
+
+        <div class="card-back">
+          <img src="https://picsum.photos/500/700" alt="Revealed image">
+          <h2>✨ Revealed!</h2>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
